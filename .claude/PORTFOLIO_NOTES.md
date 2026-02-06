@@ -217,6 +217,50 @@ A skilled Software Engineer with more than 3 years of experience, specializing i
 
 ---
 
+### Prompt 8: Git Commit and Push
+**User Request:**
+> side by side commit and and push all the changes of this project in GitHub as well.
+
+**Action Taken:**
+- Configured git identity (kashmehta007@gmail.com / Kashish Mehta)
+- Staged all 11 portfolio files
+- Created comprehensive commit with detailed message
+- Pushed to GitHub remote (origin/main)
+
+**Commit Details:**
+- **Commit Hash:** `96f2657`
+- **Files Committed:** 11 files (3,244 lines added)
+- **Branch:** main
+- **Remote:** https://github.com/dskashishmehta/portfolioWebsite
+
+**Files Not Committed (intentional):**
+- `KashishLinkedInProfile.pdf` - Personal resume file
+- `.claude/settings.local.json` - Local settings
+
+---
+
+### Prompt 9: Theme Consistency
+**User Request:**
+> I have seen all pages are using different themes, match these themes so that it looks more professional and elegant.
+
+**Action Taken:**
+- Unified color scheme across all pages using primary blue (#2563EB)
+- Updated education.html - Removed colorful card headers (red, orange, emerald), now uses consistent white cards with blue gradient logos
+- Updated experience.html - Changed company logo gradients to primary blue, unified duration badges
+- Updated projects.html - Changed stats section background for consistency
+- Standardized check mark icons to use primary blue instead of green/varied colors
+- Standardized all badges to use `bg-primary/10 text-primary` or `bg-slate-100 text-slate-700`
+
+**Theme Standards Established:**
+- **Primary Color:** #2563EB (Blue)
+- **Card Style:** White background, slate-200 border, rounded-2xl, p-8
+- **Logo Gradient:** from-primary to-blue-700
+- **Badge Colors:** Primary blue or neutral slate
+- **Check Icons:** Primary blue
+- **Section Backgrounds:** Alternating bg-white and bg-slate-50
+
+---
+
 ## Files Created
 
 | File | Purpose |
