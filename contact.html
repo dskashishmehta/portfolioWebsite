@@ -198,7 +198,7 @@
 
                             <!-- Form Note -->
                             <p class="mt-4 text-sm text-slate-500 text-center">
-                                By submitting this form, you agree to receive a response via email.
+                                Clicking send will open your email client to compose the message.
                             </p>
                         </div>
                     </div>
@@ -252,13 +252,14 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form submission handler
+        // Form submission handler - Opens email client
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
 

@@ -261,6 +261,41 @@ A skilled Software Engineer with more than 3 years of experience, specializing i
 
 ---
 
+### Prompt 10: Host on GitHub Pages
+**User Request:**
+> host this website on GitHub Pages
+
+**Action Taken:**
+- Provided manual steps to enable GitHub Pages (gh CLI not available)
+
+**GitHub Pages Setup Steps:**
+1. Go to https://github.com/dskashishmehta/portfolioWebsite
+2. Click Settings → Pages (left sidebar)
+3. Under Source: Select branch `main`, folder `/ (root)`
+4. Click Save
+
+**Live Website URL:** https://dskashishmehta.github.io/portfolioWebsite/
+
+---
+
+### Prompt 11: Contact Form with EmailJS (CANCELLED)
+**User Request:**
+> So now what I want is there is a contact page where If any user enter the information that information should come to my email i.e. kashmehta007@gmail.com and the user enters their email id in that email it should reply that Message Sent to kashish and he will reply in 72 hrs.
+
+**Status:** CANCELLED by user
+
+**Action Taken:**
+- Initially added EmailJS integration
+- User decided to skip this feature
+- Reverted to simple mailto functionality (opens user's email client)
+
+**Current Contact Form Behavior:**
+- User fills in form (name, email, subject, message)
+- Clicking "Send Message" opens their default email client
+- Email is pre-filled with form data and sent to kashmehta007@gmail.com
+
+---
+
 ## Files Created
 
 | File | Purpose |
