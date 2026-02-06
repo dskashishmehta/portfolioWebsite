@@ -1,0 +1,12 @@
+{
+  "skills": {
+    "ui-ux": {
+      "description": "UI/UX design expert using HTML5 and Tailwind CSS for creating beautiful, accessible, responsive web interfaces",
+      "path": ".claude/skills/ui-ux-design.md"
+    },
+    "javascript": {
+      "description": "JavaScript expert for modern ES6+, DOM manipulation, async programming, and interactive web applications",
+      "path": ".claude/skills/javascript.md"
+    }
+  }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Work Experience - Kashish Mehta's professional journey as a Software Engineer">
+    <title>Experience | Kashish Mehta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#0F172A',
+                        accent: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-xl font-bold text-primary">KM</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-primary transition-colors">About</a>
+                    <a href="experience.html" class="text-primary font-medium">Experience</a>
+                    <a href="education.html" class="text-slate-600 hover:text-primary transition-colors">Education</a>
+                    <a href="skills.html" class="text-slate-600 hover:text-primary transition-colors">Skills</a>
+                    <a href="projects.html" class="text-slate-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-slate-600 hover:text-primary py-2">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-primary py-2">About</a>
+                    <a href="experience.html" class="text-primary font-medium py-2">Experience</a>
+                    <a href="education.html" class="text-slate-600 hover:text-primary py-2">Education</a>
+                    <a href="skills.html" class="text-slate-600 hover:text-primary py-2">Skills</a>
+                    <a href="projects.html" class="text-slate-600 hover:text-primary py-2">Projects</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-lg text-center">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-16">
+        <!-- Page Header -->
+        <section class="py-12 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-primary font-medium mb-2">My Professional Journey</p>
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-900">Work Experience</h1>
+                <p class="mt-4 text-slate-600 max-w-2xl">Over 3 years of experience building robust software solutions across different industries</p>
+            </div>
+        </section>
+
+        <!-- Experience Cards -->
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-8">
+                    <!-- NielsenIQ -->
+                    <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <!-- Company Logo -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                                    NIQ
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                                    <div>
+                                        <h2 class="text-2xl font-bold text-slate-900">Software Engineer</h2>
+                                        <p class="text-primary font-medium">NielsenIQ</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-slate-500">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span class="font-medium">October 2022 - Present</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2 text-slate-500 mb-6">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Pune, Maharashtra, India</span>
+                                </div>
+
+                                <!-- Responsibilities -->
+                                <div class="mb-6">
+                                    <h3 class="font-semibold text-slate-900 mb-3">Key Responsibilities & Achievements</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Crafted multiple APIs, streamlining the upload and processing of currency data across various modules</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Implemented robust Spring Security measures to fortify transactional data integrity</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Played a key role in identifying and resolving system bugs, ensuring uninterrupted functionality and user satisfaction</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Technologies -->
+                                <div>
+                                    <h3 class="font-semibold text-slate-900 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Java</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Spring Boot</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Spring Security</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">PostgreSQL</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">REST APIs</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duration Badge -->
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <span class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                3 years 5 months
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- ACS Solutions -->
+                    <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <!-- Company Logo -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-700 rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                                    ACS
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                                    <div>
+                                        <h2 class="text-2xl font-bold text-slate-900">Software Engineer</h2>
+                                        <p class="text-emerald-600 font-medium">ACS Solutions</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-slate-500">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span class="font-medium">April 2021 - October 2022</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2 text-slate-500 mb-6">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Noida, Uttar Pradesh, India</span>
+                                </div>
+
+                                <!-- Responsibilities -->
+                                <div class="mb-6">
+                                    <h3 class="font-semibold text-slate-900 mb-3">Key Responsibilities & Achievements</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Elevated the myStore Mobile App utilizing Python with enhanced features and functionality</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Led the integration of features for visualizing Barter Application reports and implemented country-wise rollout</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Conducted data extraction, cleaning, and processing, followed by in-depth data analysis with actionable insights</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="text-slate-600">Developed a machine learning solution to predict post-discharge hospitalization likelihood, aiding therapists in determining appropriate patient care levels</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Technologies -->
+                                <div>
+                                    <h3 class="font-semibold text-slate-900 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Python</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Machine Learning</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Data Analysis</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Mobile Development</span>
+                                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Data Processing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duration Badge -->
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <span class="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-lg font-medium">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                1 year 7 months
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- DataTrained -->
+                    <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <!-- Company Logo -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                                    DT
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                                    <div>
+                                        <h2 class="text-2xl font-bold text-slate-900">Data Science Intern</h2>
+                                        <p class="text-violet-600 font-medium">DataTrained</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-slate-500">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span class="font-medium">March 2021</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2 text-slate-500 mb-6">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Noida, Uttar Pradesh, India</span>
+                                </div>
+
+                                <!-- Description -->
+                                <div class="mb-6">
+                                    <p class="text-slate-600">Gained hands-on experience in data science methodologies, working on real-world projects and learning industry best practices for data analysis and machine learning.</p>
+                                </div>
+
+                                <!-- Technologies -->
+                                <div>
+                                    <h3 class="font-semibold text-slate-900 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Python</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Data Science</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Machine Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duration Badge -->
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <span class="inline-flex items-center px-4 py-2 bg-violet-100 text-violet-700 rounded-lg font-medium">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                1 month (Internship)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Summary -->
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Career Highlights</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-slate-50 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">3+</div>
+                        <p class="text-slate-600">Years of Experience</p>
+                    </div>
+                    <div class="text-center p-6 bg-slate-50 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">2</div>
+                        <p class="text-slate-600">Companies Worked</p>
+                    </div>
+                    <div class="text-center p-6 bg-slate-50 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">10+</div>
+                        <p class="text-slate-600">APIs Developed</p>
+                    </div>
+                    <div class="text-center p-6 bg-slate-50 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">ML</div>
+                        <p class="text-slate-600">Solutions Built</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-slate-400 mb-4 md:mb-0">
+                    <p>&copy; 2024 Kashish Mehta. All rights reserved.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/in/kashish-mehta7" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:kashmehta007@gmail.com" class="text-slate-400 hover:text-white transition-colors" aria-label="Email">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
