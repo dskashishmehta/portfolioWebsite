@@ -278,21 +278,214 @@ A skilled Software Engineer with more than 3 years of experience, specializing i
 
 ---
 
-### Prompt 11: Contact Form with EmailJS (CANCELLED)
+### Prompt 11: Contact Form with EmailJS (CANCELLED - Later Re-implemented)
 **User Request:**
 > So now what I want is there is a contact page where If any user enter the information that information should come to my email i.e. kashmehta007@gmail.com and the user enters their email id in that email it should reply that Message Sent to kashish and he will reply in 72 hrs.
 
-**Status:** CANCELLED by user
+**Status:** Initially CANCELLED, later RE-IMPLEMENTED in Prompt 14
+
+---
+
+### Prompt 12: Move Skills to Global Configuration
+**User Request:**
+> So now whatever skills you created make it global, and make sure in future also what you create it make it global only okay?
 
 **Action Taken:**
-- Initially added EmailJS integration
-- User decided to skip this feature
-- Reverted to simple mailto functionality (opens user's email client)
+- Created global skills directory at `%APPDATA%\claude\skills\`
+- Copied `ui-ux-design.md` and `javascript.md` to global location
+- Deleted local skills from project's `.claude/skills/` folder
 
-**Current Contact Form Behavior:**
-- User fills in form (name, email, subject, message)
-- Clicking "Send Message" opens their default email client
-- Email is pre-filled with form data and sent to kashmehta007@gmail.com
+**Global Skills Location:** `%APPDATA%\claude\skills\`
+
+**STANDARD REQUIREMENT ESTABLISHED:**
+- All future skills must be created globally, not project-specific
+
+---
+
+### Prompt 13: Delete Local Skills After Global Registration
+**User Request:**
+> Now you can delete it from project
+
+**Action Taken:**
+- Verified skills exist in global location
+- Deleted `.claude/skills/` folder from project directory
+
+---
+
+### Prompt 14: Contact Form EmailJS Implementation (RE-IMPLEMENTED)
+**User Request:**
+> Now in the contact page, what I want is if someone message me then take that message to me at: kashmehta007@gmail.com and user should get the welcome email that Email send to Kashish, and he will reply it in max. of or upto 72 hrs. something like that, in HTML Format, and use this emailId: kashishportfoliowebsite@gmail.com
+
+**Action Taken:**
+- Integrated EmailJS SDK into contact.html
+- Created two email templates:
+  1. **Notification Template** (template_hqmtlok) - Notifies Kashish of new contact
+  2. **Auto-Reply Template** (template_397mdqf) - Sends confirmation to user
+
+**EmailJS Configuration:**
+- **Service ID:** service_5143ti9
+- **Public Key:** vAJdpGP6NPI_wWFbA
+- **Notification Template ID:** template_hqmtlok
+- **Auto-Reply Template ID:** template_397mdqf
+- **From Email:** kashishportfoliowebsite@gmail.com
+- **To Email (notifications):** kashmehta007@gmail.com
+
+**Features:**
+- Loading spinner while sending
+- Success/error toast messages
+- Auto-reply sent to user with 72-hour response time note
+- Graceful fallback if auto-reply fails (notification still shows success)
+
+---
+
+### Prompt 15: Enable Star and Share Buttons on Projects Page
+**User Request:**
+> Okay now in Projects Page, There I can see multiple GitHub Projects and In that for every project there star mark and share button but that is not enabled and not working, please enable both options.
+
+**Action Taken:**
+- Updated `projects.html` to enable star and share functionality
+- **Star Button:** Opens GitHub stargazers page for the repo (hover turns yellow)
+- **Share Button:**
+  - On mobile: Opens native share dialog (WhatsApp, Messages, etc.)
+  - On desktop: Copies repo URL to clipboard
+- Added toast notification system for "Link copied to clipboard!" message
+
+---
+
+### Prompt 16: Update Experience from 3+ to 5+ Years
+**User Request:**
+> Now in index page where ever it is written 3+ years experience it should be 5+ please correct this info.
+
+**Action Taken:**
+- Updated `index.html`:
+  - Hero section text: "5+ years of experience"
+  - Hero graphic box: "5+" Years Experience
+  - Quick Stats section: "5+" Years Experience
+
+---
+
+### Prompt 17: Update 5+ Years Across All Pages
+**User Request:**
+> Make sure this 5+ yrs experience thing should be updated in all pages where it is written 3+
+
+**Action Taken:**
+- Updated `about.html`:
+  - Bio text: "5 years of experience"
+  - Stats card: "5+ Years"
+- Updated `experience.html`:
+  - Page header: "Over 5 years of experience"
+
+**Note:** Project-specific durations (like "3 years 5 months" at NielsenIQ) were kept unchanged as per user's clarification.
+
+---
+
+### Prompt 18: Update Career Highlights Section
+**User Request:**
+> In Career Highlights of Experience section I can see 3+ total years, also please check if any where else
+
+**Action Taken:**
+- Updated `experience.html` Career Highlights section: "5+" Years of Experience
+
+**Final Verification:**
+All total experience references now show "5+" across:
+- index.html (3 locations)
+- about.html (2 locations)
+- experience.html (2 locations)
+
+---
+
+### Prompt 19: Commit Changes
+**User Request:**
+> commit these changes
+
+**Action Taken:**
+- Staged all modified files (about.html, contact.html, experience.html, index.html, projects.html)
+- Staged deleted skill files
+- Created commit with message: "Update experience to 5+ years and add contact/projects features"
+
+**Commit Hash:** 496688a
+
+---
+
+### Prompt 20: Push to GitHub
+**User Request:**
+> Also push to GitHub
+
+**Action Taken:**
+- Pushed commit to origin/main
+- Changes now live on GitHub
+
+---
+
+### Prompt 21: Update Portfolio Notes
+**User Request:**
+> Also update the prompts by adding all these prompts.. I mean to say at this path we have Portfolio_Notes.md file where we are adding all prompts, so add all today prompts in this: E:\Projects\portfolioWebsite\.claude
+
+**Action Taken:**
+- Added Prompts 12-21 to this notes file
+- Updated Files Created table
+- Updated Last Updated date
+
+---
+
+### Prompt 22: Add Profile Image to Hero Section (Attempted with LinkedIn Image)
+**User Request:**
+> At here instead of KM do it Kashish Mehta and left create a circle with image: [LinkedIn profile image URL]
+
+**Action Taken:**
+- Updated logo across all pages to show profile image + "Kashish Mehta"
+
+**Status:** REVERTED by user request
+
+---
+
+### Prompt 23: Revert Logo Change
+**User Request:**
+> Umm revert it back 1 prompt
+
+**Action Taken:**
+- Reverted all pages back to "KM" logo
+
+---
+
+### Prompt 24: Add Profile Photo to Hero Section
+**User Request:**
+> Add this image at front page which should look decent and professional, and if needed you can use AI image of this: [Local image from C:\Users\kashm\OneDrive\Desktop\Kashish_pics\099A0976.JPG]
+
+**Action Taken:**
+- Copied image to `assets/profile.jpg` in project folder
+- Updated hero section in index.html to display profile photo
+- Added rounded frame with border
+- Added gradient blur effect behind image
+- Added "5+ Years Exp." badge overlay at bottom-right
+
+---
+
+### Prompt 25-27: Adjust Profile Image Position and Zoom
+**User Requests:**
+> Make sure image face should be align at centre and zoom it.
+> Move above more, still it is in more downward
+> Move this photo more upward, still it is in downward.
+> Zoom the photo little bit
+
+**Action Taken:**
+- Adjusted object-position from 20% → 45% → 70% → 90% to move face upward
+- Increased zoom from scale-150 to scale-[1.8]
+
+**Final Image Settings:**
+- Scale: 1.8 (180% zoom)
+- Object Position: 25% 90%
+
+---
+
+### Prompt 28: Commit, Push, and Update Notes
+**User Request:**
+> Okay commit these changes and push it to github also update the prompts.
+
+**Action Taken:**
+- Added prompts 22-28 to PORTFOLIO_NOTES.md
+- Staged index.html, assets/profile.jpg, and PORTFOLIO_NOTES.md
+- Committed and pushed to GitHub
 
 ---
 
@@ -305,12 +498,17 @@ A skilled Software Engineer with more than 3 years of experience, specializing i
 | `experience.html` | Work experience details |
 | `education.html` | Education background |
 | `skills.html` | Technical skills and proficiency |
-| `contact.html` | Contact form and information |
-| `projects.html` | Dynamic GitHub projects page with auto-sync |
-| `.claude/skills/ui-ux-design.md` | UI/UX design skill definition |
-| `.claude/skills/javascript.md` | JavaScript skill definition |
-| `.claude/settings.json` | Claude Code settings with skill registration |
+| `contact.html` | Contact form with EmailJS integration |
+| `projects.html` | Dynamic GitHub projects page with auto-sync, star & share |
+| `assets/profile.jpg` | Profile photo for hero section |
+| `.claude/settings.json` | Claude Code settings |
 | `.claude/PORTFOLIO_NOTES.md` | This notes file |
+
+**Global Skills (moved from project):**
+| File | Location |
+|------|----------|
+| `ui-ux-design.md` | `%APPDATA%\claude\skills\` |
+| `javascript.md` | `%APPDATA%\claude\skills\` |
 
 ---
 
@@ -320,6 +518,27 @@ A skilled Software Engineer with more than 3 years of experience, specializing i
 - **API Endpoint:** `https://api.github.com/users/dskashishmehta/repos`
 - **Auto-Sync:** Projects page fetches latest data on every page load
 - **No Backend Required:** Pure client-side implementation using Fetch API
+- **Star Button:** Links to repo stargazers page
+- **Share Button:** Native share (mobile) or clipboard copy (desktop)
+
+---
+
+## EmailJS Integration Details
+
+- **Service ID:** service_5143ti9
+- **Public Key:** vAJdpGP6NPI_wWFbA
+- **Notification Template ID:** template_hqmtlok
+- **Auto-Reply Template ID:** template_397mdqf
+- **From Email:** kashishportfoliowebsite@gmail.com
+- **To Email (notifications):** kashmehta007@gmail.com
+
+---
+
+## Experience Information
+
+- **Total Experience:** 5+ years (updated from 3+)
+- **Current Role:** Software Engineer at NielsenIQ (October 2022 - Present)
+- **Previous Role:** Software Engineer at ACS Solutions (April 2021 - October 2022)
 
 ---
 
