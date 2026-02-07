@@ -575,3 +575,63 @@ All total experience references now show "5+" across:
 ---
 
 *Last Updated: February 7, 2026*
+
+---
+
+### Prompt 32: Enhance Portfolio Design (Header & Footer)
+**User Request:**
+> Enhance Portfolio Pages (Systematically enhance all portfolio pages by applying consistent design and functionality updates. This includes updating headers, footers, CSS, and JavaScript across all pages to match the enhanced versions of index.html and about.html.)
+
+**Action Taken:**
+- Updated headers across all 7 pages (`index.html`, `about.html`, `experience.html`, `skills.html`, `projects.html`, `education.html`, `contact.html`)
+- Implemented dynamic scroll effects: Header becomes opaque and adds shadow on scroll
+- Added active state indication with animated underline
+- Enhanced mobile menu with slide-down animation and backdrop blur
+- Created rich multi-column footer with gradient background
+- Standardized CSS: Added `nav-link`, `footer-gradient`, `card-hover`, `scroll-top-btn` classes
+- Implemented JavaScript: Scroll detection, scroll-to-top button, mobile menu toggle logic
+
+---
+
+### Prompt 33: Commit and Push Enhancements
+**User Request:**
+> Do commit and github push
+
+**Action Taken:**
+- Staged all modified pages and new assets
+- Committed with message: "Enhance portfolio pages: updated header, footer, CSS, and assets"
+- Pushed changes to GitHub (origin/main)
+
+---
+
+### Prompt 34: Update Portfolio Notes (Current)
+**User Request:**
+> In this complete today chat whatever I send you the prompts for portfolio website, that all prompts you need to add it in existing PORTFOLIO_NOTES.md file which is at this path: E:\Projects\portfolioWebsite\.claude
+
+**Action Taken:**
+- Deleted incorrectly created note file in root
+- Appended Prompts 32-34 to `E:\Projects\portfolioWebsite\.claude\PORTFOLIO_NOTES.md`
+### Prompt 35: Fix Mobile Image Visibility
+**User Request:**
+> I am not able to see my image, if I use in mobile? Can you please update it, so that I can see my photo in mobile view also?
+
+**Action Taken:**
+- Updated `index.html` Hero Section
+- Removed `hidden lg:flex` class from image container, changed to `flex`
+- Added responsive sizing: `w-64 h-64` for mobile, `sm:w-80 sm:h-80` for tablet/desktop
+- Added `mt-10 lg:mt-0` for proper spacing on mobile layout
+- Image now visible below the text on mobile devices
+
+---
+
+### Prompt 36: Commit and Push Mobile Fixes
+**User Request:**
+> Can you please commit and push the changes to github
+
+**Action Taken:**
+- Updated transparency of this action in `PORTFOLIO_NOTES.md`
+- Staged `index.html` (Mobile image fix + CSS correction)
+- Staged `PORTFOLIO_NOTES.md`
+- Committed with message: "Fix mobile profile image visibility and update notes"
+- Pushed to GitHub (origin/main)
+
