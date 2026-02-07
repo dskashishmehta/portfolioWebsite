@@ -489,6 +489,38 @@ All total experience references now show "5+" across:
 
 ---
 
+### Prompt 29: Move Global Skills to User .claude Folder
+**User Request:**
+> Okay so you shifted the global skills now you need add it in .claude folder in windows users folder
+
+**Action Taken:**
+- Created `C:\Users\kashm\.claude\skills\` directory
+- Copied `javascript.md` and `ui-ux-design.md` from `%APPDATA%\claude\skills\`
+
+**New Global Skills Location:** `C:\Users\kashm\.claude\skills\`
+
+---
+
+### Prompt 30: Remove Skills from APPDATA
+**User Request:**
+> yes remove it from there
+
+**Action Taken:**
+- Removed `%APPDATA%\claude\skills\` folder
+
+**Final Skills Location:** `C:\Users\kashm\.claude\skills\`
+
+---
+
+### Prompt 31: Update Notes
+**User Request:**
+> update the prompts in notes file
+
+**Action Taken:**
+- Added prompts 29-31 to PORTFOLIO_NOTES.md
+
+---
+
 ## Files Created
 
 | File | Purpose |
@@ -507,8 +539,8 @@ All total experience references now show "5+" across:
 **Global Skills (moved from project):**
 | File | Location |
 |------|----------|
-| `ui-ux-design.md` | `%APPDATA%\claude\skills\` |
-| `javascript.md` | `%APPDATA%\claude\skills\` |
+| `ui-ux-design.md` | `C:\Users\kashm\.claude\skills\` |
+| `javascript.md` | `C:\Users\kashm\.claude\skills\` |
 
 ---
 

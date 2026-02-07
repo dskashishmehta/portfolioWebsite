@@ -1,0 +1,11 @@
+# Robots.txt for Kashish Mehta Portfolio
+# https://kashishmehta.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kashishmehta.dev/sitemap.xml
+
+# Disallow admin or private directories (none in this case)
+# Disallow: /private/

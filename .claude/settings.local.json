@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "WebSearch",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd complete portfolio website with multi-page design\n\n- Add 7 HTML pages: Home, About, Experience, Education, Skills, Projects, Contact\n- Implement responsive design with Tailwind CSS and mobile navigation\n- Add dynamic GitHub projects page with auto-sync from API\n- Create Claude Code skills for UI/UX design and JavaScript\n- Add portfolio notes for tracking all prompts and requirements\n\nFeatures:\n- Professional UI with consistent design system\n- Projects page fetches repositories dynamically from GitHub\n- Clickable project titles linking to GitHub repos\n- Filter system for original/forked projects\n- Contact form with mailto integration\n- Skill proficiency bars and categorized technologies\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUnify theme across all pages for consistent professional look\n\n- Standardize all logo gradients to primary blue \\(from-primary to-blue-700\\)\n- Update education.html: Remove colorful card headers, use clean white cards\n- Update experience.html: Unify company logos and duration badges to blue\n- Update projects.html: Fix stats section background for consistency\n- Change all check icons from green to primary blue\n- Standardize badges to primary/10 or slate-100 backgrounds\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh api:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRevert contact form to mailto and update notes\n\n- Remove EmailJS integration \\(feature cancelled by user\\)\n- Revert to simple mailto functionality for contact form\n- Update PORTFOLIO_NOTES.md with all prompts documented\n\nContact form now opens user''s email client with pre-filled data.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(cmd /c \"dir C:\\\\Users\\\\kashm.claude\\\\skills\")"
+    ]
+  }
+}
