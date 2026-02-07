@@ -187,18 +187,27 @@
                                         placeholder="Tell me about your project or opportunity..."></textarea>
                                 </div>
 
-                                <button type="submit"
-                                    class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <button type="submit" id="submit-btn"
+                                    class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <svg id="send-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                                     </svg>
-                                    Send Message
+                                    <svg id="loading-icon" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                    <span id="btn-text">Send Message</span>
                                 </button>
                             </form>
 
+                            <!-- Form Status Messages -->
+                            <div id="form-status" class="mt-4 text-center hidden">
+                                <p id="status-message" class="text-sm"></p>
+                            </div>
+
                             <!-- Form Note -->
                             <p class="mt-4 text-sm text-slate-500 text-center">
-                                Clicking send will open your email client to compose the message.
+                                Your message will be sent directly to Kashish. You'll receive a confirmation email.
                             </p>
                         </div>
                     </div>
@@ -251,6 +260,9 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -259,9 +271,19 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form submission handler - Opens email client
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        // Initialize EmailJS
+        emailjs.init("vAJdpGP6NPI_wWFbA");
+
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const sendIcon = document.getElementById('send-icon');
+            const loadingIcon = document.getElementById('loading-icon');
+            const btnText = document.getElementById('btn-text');
+            const formStatus = document.getElementById('form-status');
+            const statusMessage = document.getElementById('status-message');
 
             // Get form data
             const name = document.getElementById('name').value;
@@ -269,11 +291,53 @@
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
-            // Create mailto link
-            const mailtoLink = `mailto:kashmehta007@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            // Show loading state
+            submitBtn.disabled = true;
+            sendIcon.classList.add('hidden');
+            loadingIcon.classList.remove('hidden');
+            btnText.textContent = 'Sending...';
 
-            // Open email client
-            window.location.href = mailtoLink;
+            try {
+                // Send notification email to Kashish
+                await emailjs.send("service_5143ti9", "template_hqmtlok", {
+                    from_name: name,
+                    from_email: email,
+                    subject: subject,
+                    message: message,
+                    to_email: "kashmehta007@gmail.com"
+                });
+
+                // Try to send auto-reply to user (don't fail if this doesn't work)
+                try {
+                    await emailjs.send("service_5143ti9", "template_397mdqf", {
+                        to_name: name,
+                        to_email: email,
+                        from_name: "Kashish Mehta"
+                    });
+                } catch (autoReplyError) {
+                    console.warn('Auto-reply failed:', autoReplyError);
+                }
+
+                // Show success message
+                formStatus.classList.remove('hidden');
+                statusMessage.textContent = 'Message sent successfully! Check your email for confirmation.';
+                statusMessage.className = 'text-sm text-green-600 font-medium';
+
+                // Reset form
+                document.getElementById('contact-form').reset();
+
+            } catch (error) {
+                console.error('Email send failed:', error);
+                formStatus.classList.remove('hidden');
+                statusMessage.textContent = 'Failed to send message. Please try again or email directly.';
+                statusMessage.className = 'text-sm text-red-600 font-medium';
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                sendIcon.classList.remove('hidden');
+                loadingIcon.classList.add('hidden');
+                btnText.textContent = 'Send Message';
+            }
         });
     </script>
 </body>
